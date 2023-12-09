@@ -1,8 +1,9 @@
 return {
   "AstroNvim/astrocommunity",
   { import = "astrocommunity.pack.rust" },
-  { import = "astrocommunity.colorscheme.nightfox-nvim", enabled = false },
-  { import = "astrocommunity.colorscheme.kanagawa-nvim", enabled = true },
+  -- { import = "astrocommunity.workflow.hardtime-nvim" },
+  { import = "astrocommunity.colorscheme.nightfox-nvim" },
+  { import = "astrocommunity.colorscheme.kanagawa-nvim" },
   { import = "astrocommunity.colorscheme.rose-pine" },
   { import = "astrocommunity.colorscheme.catppuccin" },
   { -- further customize the options set by the community
