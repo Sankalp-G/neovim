@@ -134,9 +134,18 @@ return {
         hijack_netrw_behavior = "open_current",
         use_libuv_file_watcher = true,
         filtered_items = {
-          visible = true,
+          visible = false,
           hide_dotfiles = false,
-          hide_gitignored = true,
+          hide_gitignored = false,
+          hide_by_name = {
+            "node_modules",
+            ".git",
+            ".cache",
+            ".DS_Store",
+            ".next",
+            ".vscode",
+            ".github",
+          }
         },
       },
       event_handlers = {
