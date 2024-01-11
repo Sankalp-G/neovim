@@ -4,21 +4,16 @@
 -- lower level configuration and more robust one. (which-key will
 -- automatically pick-up stored data by this setting.)
 return {
-  -- first key is the mode
+  -- normal
   n = {
-    -- second key is the lefthand side of the map
-
-    -- navigate buffer tabs with `H` and `L`
-    -- L = {
-    --   function() require("astronvim.utils.buffer").nav(vim.v.count > 0 and vim.v.count or 1) end,
-    --   desc = "Next buffer",
-    -- },
-    -- H = {
-    --   function() require("astronvim.utils.buffer").nav(-(vim.v.count > 0 and vim.v.count or 1)) end,
-    --   desc = "Previous buffer",
-    -- },
-
-    -- mappings seen under group name "Buffer"
+    L = {
+      function() require("astronvim.utils.buffer").nav(vim.v.count > 0 and vim.v.count or 1) end,
+      desc = "Next buffer",
+    },
+    H = {
+      function() require("astronvim.utils.buffer").nav(-(vim.v.count > 0 and vim.v.count or 1)) end,
+      desc = "Previous buffer",
+    },
     ["<leader>bD"] = {
       function()
         require("astronvim.utils.status").heirline.buffer_picker(
@@ -27,14 +22,25 @@ return {
       end,
       desc = "Pick to close",
     },
-    -- tables with the `name` key will be registered with which-key if it's installed
-    -- this is useful for naming menus
     ["<leader>b"] = { name = "Buffers" },
-    -- quick save
-    ["<C-s>"] = { ":w<cr>", desc = "Save File" },  -- change description but the same command
+    ["<C-s>"] = { ":w<cr>", desc = "Save File" },
+    ["<C-d>"] = { "<C-d>zz" },
+    ["<C-u>"] = { "<C-u>zz" },
   },
-  t = {
-    -- setting a mapping to false will disable it
-    -- ["<esc>"] = false,
+
+  -- insert
+  i = {
+    ["<C-s>"] = { ":w<cr>", desc = "Save File" },
   },
+
+  -- visual
+  v = {
+    J = { ":m '>+1<cr>gv=gv", desc = "Move line down" },
+    K = { ":m '<-2<cr>gv=gv", desc = "Move line up" },
+  },
+
+  -- command
+  x = {
+
+  }
 }
