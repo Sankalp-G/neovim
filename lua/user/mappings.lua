@@ -30,7 +30,7 @@ return {
 
   -- insert
   i = {
-    ["<C-s>"] = { ":w<cr>", desc = "Save File" },
+    ["<C-s>"] = { "<esc>:w<cr>", desc = "Save File" },
   },
 
   -- visual
