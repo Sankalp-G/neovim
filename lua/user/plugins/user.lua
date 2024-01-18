@@ -9,13 +9,4 @@ return {
   --     require("lsp_signature").setup()
   --   end,
   -- },
-  {
-    "pmizio/typescript-tools.nvim",
-    dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
-    opts = {},
-    event = "BufRead",
-    setup = function()
-      require("typescript-tools").setup()
-    end,
-  }
 }
