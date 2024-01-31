@@ -9,7 +9,7 @@ return {
       "tsx",
       "rust",
       "c",
-      "cpp"
+      "cpp",
     })
   end,
 }
