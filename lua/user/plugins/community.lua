@@ -3,6 +3,7 @@ return {
   { import = "astrocommunity.pack.rust" },
   { import = "astrocommunity.pack.go" },
   { import = "astrocommunity.pack.python" },
+  { import = "astrocommunity.pack.cpp" },
   -- { import = "astrocommunity.workflow.hardtime-nvim" },
   { import = "astrocommunity.colorscheme.nightfox-nvim" },
   { import = "astrocommunity.colorscheme.kanagawa-nvim" },
