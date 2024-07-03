@@ -17,6 +17,8 @@ return {
     "zbirenbaum/copilot.lua",
     opts = {
       suggestion = {
+        auto_trigger = true,
+        debounce = 0,
         keymap = {
           accept = "<C-l>",
           accept_word = false,
@@ -28,6 +30,11 @@ return {
       },
     },
   },
+  {
+    "nmac427/guess-indent.nvim",
+    enabled = false,
+  },
+  { "Darazaki/indent-o-matic" },
 
   -- -- You can disable default plugins as follows:
   -- { "max397574/better-escape.nvim", enabled = false },
